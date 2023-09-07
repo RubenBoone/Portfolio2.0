@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/img/notepad_background.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.row {
+    margin-bottom: 5rem !important;
+    margin-top: 5rem !important;
+}
+
+.poloroid {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 3px solid black;
+    padding: 2rem;
+    text-align: center;
+    max-width: 70%;
+    transform: rotate(-5deg);
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";   
+        display: block;
+        height: 4rem;
+        position: absolute;
+        margin: auto;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        width: 10rem;
+    }
+
+    &:after {
+        background: rgba(255, 154, 235, 0.6);
+        top: 0;
+        left: -60px;
+        transform: rotate(-30deg);
+    }
+
+    &:before {
+        position: absolute;
+        bottom: 0;
+        right: -75px;
+        transform: rotate(-45deg);
+        background: rgba(45, 154, 235, 0.6);
+    }
+
+    .description {
+        font-family: 'Caveat', cursive;
+        font-size: 2.5rem;
+        padding-top: 2rem;
+        font-weight: bold;
+    }
+}
+
+.tape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 235, 0.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.tape-green {
+    background-color: rgba(125, 255, 126, 0.6);
+    transform: rotate(5deg);
+}
+
+.tape-blue {
+    background: rgba(45, 154, 235, 0.6);
+    transform: rotate(2deg);
+}
+
+.tape-pink {
+    background: rgba(255, 154, 235, 0.6);
+    transform: rotate(-5deg);
+}
+
+.tape-red {
+    background: rgba(255, 12, 50, 0.6);
+    transform: rotate(-2deg);
+
+}
+
+.tape-yellow {
+    background: rgba(226, 234, 12, 0.6);
+    transform: rotate(3deg);
+}
+
+#intro .tape:hover {
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+#intro li {
+    list-style-type: none;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    width: 17rem;
+    height: 4rem;
+}
+
+.post-it {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    height: 100%;
+    max-width: 20rem;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+    &:before {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.1);
+        content: "";
+        height: 4rem;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    & ul {
+        margin-top: 1.5rem;
+        padding-left: 2rem;
+
+        & ul {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+    }
+
+    & li {
+        padding-bottom: 0.2rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+}
+
+.pi-red {
+    background: rgb(255, 5, 43);
+    transform: rotate(5deg);
+}
+
+.pi-yellow {
+    background: rgb(255, 255, 12);
+    transform: rotate(-5deg);
+}
+
+.sticker-1{
+    transform: rotate(-14deg);
+
+    & p {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 4rem;
+    }
+}
+
+.sticker-2{
+    transform: rotate(14deg);
+
+    & p {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 4rem;
+    }
+}
+
+.sticker-3{
+    transform: rotate(-3deg);
+
+    & p {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 4rem;
+    }
+}
+
+.sticker-4{
+    transform: rotate(8deg);
+
+    & p {
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 4rem;
+    }
+}
+
+#experience h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 200px;
+}
