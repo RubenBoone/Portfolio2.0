@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../public/img/notepad_background.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+
+a:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  transform: scale(1.5);
+}
+
+.red {
+  background: rgba(255, 12, 50, 0.6);
+}
+
+.blue {
+  background: rgba(45, 154, 235, 0.6);
+}
+
+.pink {
+  background: rgba(255, 154, 235, 0.6);
+}
+
+.green {
+  background-color: rgba(125, 255, 126, 0.6);
+}
+
+.yellow {
+  background: rgba(226, 234, 12, 0.6);
+}
