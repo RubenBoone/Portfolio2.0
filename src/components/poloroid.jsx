@@ -19,36 +19,10 @@ const Poloroid = ({description, alt, picture, TapeType, tapeColor1, tapeColor2 =
         display: "Block"
     }
 
-    let topTape;
-    let botTape;
-
-    switch (TapeType) {
-        case Type.Y:
-            topTape = "tape-pos-top";
-            botTape = "tape-pos-bottom";
-            break;
-        case Type.LR:
-            topTape = "tape-pos-left-1";
-            botTape = "tape-pos-right-1";
-            break;
-        case Type.RL:
-            topTape = "tape-pos-left-2";
-            botTape = "tape-pos-right-2";
-            break;
-        case Type.S:
-            topTape = "tape-pos-top align-middle";
-            botTape = "tape-hide"
-            break;
-        default:
-            break;
-    }
-
     return (
-        <figure className="d-flex flex-column p-5 mx-1 my-5 col-lg-5 justify-content-between" style={poloroidStyle}>
-            <div className={"tape cosmetic-tape " + topTape + " " + tapeColor1}/>
+        <figure className="d-flex flex-column p-5 pb-4 mb-5" style={poloroidStyle}>
             <img src={picture} alt={alt}/>
-            <figcaption className="pt-5 handWritten big" style={descStyle}>{description}</figcaption>
-            <div className={"tape cosmetic-tape " + botTape + " " + tapeColor2}/>
+            <figcaption className="pt-3 handWritten big" style={descStyle}>{description}</figcaption>
         </figure>
     );
 }

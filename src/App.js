@@ -36,22 +36,28 @@ export const TapeType = {
 
 function App() {
   return (
-    <div className='container my-5'>
+    <div className='container p-0 my-5'>
       <h1 className='d-none'>Portfolio: Ruben Boone</h1>
-      <div>
         <h2 className='d-none'>Over Mij</h2>
-        <div className='row'>
+        <div className='row align-items-center m-3'>
+          <div className='col-md-6 col-sm-12'>
           <Poloroid picture={"/img/ruben.jpg"} alt={"Picture of Ruben Boone"} 
             description={"Ruben Boone - 2023"} TapeType={TapeType.LR} tapeColor1="blue-tape" tapeColor2="red-tape"/>
-          <SocialLinks/>
+          </div>
+          <div className='col-md-6 col-sm-12'>
+            <SocialLinks/>
+          </div>
         </div>
-        <div className='row my-5 justify-content-around'>
-          <PostIt title="Info" listItems={aboutMe}/>
-          <PostIt title="Opleidingen" listItems={degrees} color="#ffe869"/>
+        <div className='m-5 row justify-content-around'>
+          <div className='col-sm-12 col-md-4 my-3'>
+            <PostIt title="Info" listItems={aboutMe}/>
+          </div>
+          <div className='col-sm-12 col-md-4 my-3'>
+            <PostIt title="Opleidingen" listItems={degrees} color="#ffe869"/>
+          </div>
         </div>
         <h2 className='handWritten tape blue-tape p-2 m-5'>Projecten</h2>
         <ProjectList/>
-      </div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom"
 
 const TapeLink = ({text, link, download=0, color}) => {
 

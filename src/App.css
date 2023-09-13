@@ -17,7 +17,7 @@ body {
 }
 
 .big {
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.2;
 }
 
@@ -34,60 +34,6 @@ body {
   min-height: 3rem;
   min-width: 8rem;
   position: absolute;
-}
-
-.tape-pos-top {
-  top: -25px;
-  left: 32%;
-}
-
-@media screen and (min-width: 1000px) {
-  .tape-pos-top {
-    top: -25px;
-    left: 30%;
-    min-width: 12rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .tape-pos-top {
-    top: -25px;
-    left: 40%;
-    min-width: 10rem;
-  }
-}
-
-.tape-pos-bottom {
-  bottom: -25px;
-  left: 32%;
-}
-
-.tape-pos-left-1 {
-  top: 0px;
-  left: -20px;
-  transform: rotate(-30deg);
-}
-
-.tape-pos-right-1 {
-  bottom: -10px;
-  right: -20px;
-  transform: rotate(-20deg);
-}
-
-.tape-pos-left-2 {
-  top: 0px;
-  right: -20px;
-  transform: rotate(25deg);
-}
-
-.tape-pos-right-2 {
-  bottom: 0px;
-  left: -20px;
-  transform: rotate(20deg);
-}
-
-.tape-hide {
-  display: none;
 }
 
 .link {

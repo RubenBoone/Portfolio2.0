@@ -8,7 +8,7 @@ const SocialLinks = () => {
     }
 
     return (
-            <ul className="col-lg-6 d-flex flex-column justify-content-center" style={listStlye}>
+            <ul className="mx-5 d-flex flex-column justify-content-center" style={listStlye}>
                 <TapeLink text="Twitter / X" link="https://twitter.com/RealRubertoh" color="blue" degree="5"/>
                 <TapeLink text="LinkedIn" link="https://be.linkedin.com/in/rubenboone" color="red" degree="-2"/>
                 <TapeLink text="Github" color="pink" link="https://github.com/RubenBoone" degree="3"/>

@@ -23,9 +23,9 @@ const PostIt = ({title, listItems, color="#ff6854"}) => {
     }
 
     return (
-        <div className="m-5 p-0 d-flex flex-column col-md-4 col-sm-12" style={postitStyle}>
+        <div className="p-0 d-flex flex-column" style={postitStyle}>
             <p style={headerStyle} className="handWritten big p-2">{title}</p>
-            <ul style={listStyle} className="mx-4 p-3 d-flex flex-column justify-content-around">
+            <ul style={listStyle} className="mx-2 p-3 d-flex flex-column justify-content-around">
                 {items}
             </ul>            
         </div>
