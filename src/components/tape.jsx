@@ -1,28 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
-const Tape = ({text, color, degree = 0, link}) => {
+const TapeLink = ({text, link, download=0, color}) => {
 
-    const tapeStyle = {
-        width: "15rem",
-        height: "3rem",
-        margin: "0.7rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "Caveat, cursive",
-        fontSize: "1.5rem",
-        transform: "rotate(" + degree + "deg)",
-        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.4)",
-        textDecoration: "None",
-        width: "12rem",
-        textAlign: "center",
-        color: "#000"
+    if (download) {
+        return (
+            <li className="my-1 link" ><a className={"p-3 tape " + color + "-tape"} href={link} download>{text}</a></li>
+        );
     }
 
     return (
-        <li><a href={link} style={tapeStyle} className={color + " tape "} target="_blank">{text}</a></li>
+        <li className="my-1 link"><a className={"p-3 tape " + color + "-tape"} href={link} target="_blank">{text}</a></li>
     );
 }
 
-export default Tape;
+export default TapeLink;

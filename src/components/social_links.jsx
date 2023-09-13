@@ -1,28 +1,21 @@
 import React from "react";
-import Tape from "./tape";
+import TapeLink from "./tape";
 
 const SocialLinks = () => {
 
-    const listStyle = {
-        display: "flex",
-        padding: "2rem",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        listStyle: "none",
-        flexDirection: "column",
-        width: "25%",
+    const listStlye = {
+        listStyle: "none"
     }
 
     return (
-            <ul className="col-md-6 col-lg-12 mx-5" style={listStyle}>
-                <Tape text="Twitter / X" link="https://twitter.com/RealRubertoh" color="blue" degree="5"/>
-                <Tape text="LinkedIn" color="red" degree="-2"/>
-                <Tape text="Github" color="pink" degree="3"/>
-                <Tape text="E-mail" color="green" degree="5"/>
-                <Tape text="CV" color="yellow" degree="-3"/>
+            <ul className="col-lg-6 d-flex flex-column justify-content-center" style={listStlye}>
+                <TapeLink text="Twitter / X" link="https://twitter.com/RealRubertoh" color="blue" degree="5"/>
+                <TapeLink text="LinkedIn" link="https://be.linkedin.com/in/rubenboone" color="red" degree="-2"/>
+                <TapeLink text="Github" color="pink" link="https://github.com/RubenBoone" degree="3"/>
+                <TapeLink text="E-mail" color="green" link="mailto:ruben.boone01@gmail.com"degree="5"/>
+                <TapeLink text="CV" color="yellow" link="/path/to/file" degree="-3" download={1}/>
             </ul>
     );
-
 }
 
 export default SocialLinks;

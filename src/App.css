@@ -3,33 +3,118 @@
   padding: 0;
 }
 
+h1, h2 {
+  font-size: 2rem;
+}
+
 body {
-  background-image: url("../public/img/notepad_background.jpg");
-  background-repeat: repeat-y;
-  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
+  background-image: url("/public/img/notepad_background.jpg");
 }
 
-a:hover {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
-  transform: scale(1.5);
+.handWritten {
+  font-family: 'Caveat', cursive;
 }
 
-.red {
-  background: rgba(255, 12, 50, 0.6);
+.big {
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
-.blue {
-  background: rgba(45, 154, 235, 0.6);
+.tape {
+  text-align: center;
+  display: block;
+  background-color: rgba(240,240,107,0.6);
+  text-decoration: none;
+  color: #000;
+  box-shadow: 2px 2px 3px 1px rgba(0,0,0,0.2);
 }
 
-.pink {
-  background: rgba(255, 154, 235, 0.6);
+.cosmetic-tape {
+  min-height: 3rem;
+  min-width: 8rem;
+  position: absolute;
 }
 
-.green {
-  background-color: rgba(125, 255, 126, 0.6);
+.tape-pos-top {
+  top: -25px;
+  left: 32%;
 }
 
-.yellow {
-  background: rgba(226, 234, 12, 0.6);
+@media screen and (min-width: 1000px) {
+  .tape-pos-top {
+    top: -25px;
+    left: 30%;
+    min-width: 12rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tape-pos-top {
+    top: -25px;
+    left: 40%;
+    min-width: 10rem;
+  }
+}
+
+.tape-pos-bottom {
+  bottom: -25px;
+  left: 32%;
+}
+
+.tape-pos-left-1 {
+  top: 0px;
+  left: -20px;
+  transform: rotate(-30deg);
+}
+
+.tape-pos-right-1 {
+  bottom: -10px;
+  right: -20px;
+  transform: rotate(-20deg);
+}
+
+.tape-pos-left-2 {
+  top: 0px;
+  right: -20px;
+  transform: rotate(25deg);
+}
+
+.tape-pos-right-2 {
+  bottom: 0px;
+  left: -20px;
+  transform: rotate(20deg);
+}
+
+.tape-hide {
+  display: none;
+}
+
+.link {
+  transition: 500ms ease-in-out;
+}
+
+.link:hover, .link:focus   {
+  box-shadow: 3px 3px 3px rgba(0,0,0, 0.6);
+  transform: scale(1.1);
+}
+
+.red-tape {
+  background-color: rgba(208, 76, 76, 0.4) !important;
+}
+
+.blue-tape {
+  background-color: rgba(0, 78, 245, 0.4) !important;
+}
+
+.green-tape {
+  background-color: rgba(59, 233, 79, 0.4) !important;
+}
+
+.pink-tape {
+  background-color: rgba(233, 59, 216, 0.4) !important;
+}
+
+img {
+  border: 2px solid black;
 }

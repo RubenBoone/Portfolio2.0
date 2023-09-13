@@ -1,66 +1,55 @@
 import React from "react";
+import {TapeType as Type} from "../App"
 
-const Poloroid = ({name, description, picture, color="red", degree=0, tapeDegree=-40}) => {
+const Poloroid = ({description, alt, picture, TapeType, tapeColor1, tapeColor2 = tapeColor1}) => {
     
-    const poloroidHolderTopStyle = {
-        content: "hah",
-        display: "block",
-        position: "absolute",
-        margin: "auto",
-        width: "30%",
-        height: "10%",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.4)",
-        top: "0",
-        left: "-25px",
-        transform: "rotate(" + tapeDegree + "deg)"
-    }
-
-    const poloroidHolderBottomStyle = {
-        content: "",
-        display: "block",
-        position: "absolute",
-        margin: "auto",
-        width: "30%",
-        height: "10%",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.4)",
-        bottom: "0",
-        right: "-20px",
-        transform: "rotate(" + tapeDegree + "deg)"
-    }
-
     const poloroidStyle = {
+        backgroundColor: "#FFF",
         border: "3px solid black",
-        display: "flex",
-        flexDirection: "column",
-        padding: "2rem",
-        background: "#fff",
-        justifyContent: "center",
-        alignItems: "center",
-        maxWidth: "300px",
-        margin: "2rem",
-        position: "relative",
-        transform: "rotate(" + degree + "deg)"
+        boxShadow: "3px 3px 15px rgba(0,0,0,0.6)",
+        position: "relative"
     }
-    
-    const imageStyle = {
-        maxWidth: "100%"
-    }
-    
-    const descriptionStyle = {
+
+    const descStyle = {
         textAlign: "center",
-        fontFamily: "Caveat, cursive",
-        fontSize: "1.7rem",
-        fontWeight: "bold",
-        marginTop: "20px"
+        fontWeight: "Bold"
+    }
+
+    const tapeStyle = {
+        display: "Block"
+    }
+
+    let topTape;
+    let botTape;
+
+    switch (TapeType) {
+        case Type.Y:
+            topTape = "tape-pos-top";
+            botTape = "tape-pos-bottom";
+            break;
+        case Type.LR:
+            topTape = "tape-pos-left-1";
+            botTape = "tape-pos-right-1";
+            break;
+        case Type.RL:
+            topTape = "tape-pos-left-2";
+            botTape = "tape-pos-right-2";
+            break;
+        case Type.S:
+            topTape = "tape-pos-top align-middle";
+            botTape = "tape-hide"
+            break;
+        default:
+            break;
     }
 
     return (
-            <figure className="poloroid col-md-12 col-lg-6" style={poloroidStyle}>
-                <div style={poloroidHolderTopStyle} className={color}/>
-                <img src={picture} alt={"Picture of " + name} style={imageStyle}/>
-                <figcaption style={descriptionStyle}>{description}</figcaption>
-                <div style={poloroidHolderBottomStyle} className={color}/>
-            </figure>
+        <figure className="d-flex flex-column p-5 mx-1 my-5 col-lg-5 justify-content-between" style={poloroidStyle}>
+            <div className={"tape cosmetic-tape " + topTape + " " + tapeColor1}/>
+            <img src={picture} alt={alt}/>
+            <figcaption className="pt-5 handWritten big" style={descStyle}>{description}</figcaption>
+            <div className={"tape cosmetic-tape " + botTape + " " + tapeColor2}/>
+        </figure>
     );
 }
 
