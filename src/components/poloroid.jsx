@@ -32,7 +32,7 @@ const Poloroid = ({description, alt, picture, rotate, tapeColor1, tapeColor2 = t
             <div className={"cosmetic-tape " + tapeColor2} style={tape1Pos}/>
             <img src={picture} alt={alt}/>
             <figcaption className="pt-3 handWritten big" style={descStyle}>{description}</figcaption>
-            {showmoreButton == 0 ? <div style={tapeBotPos} className={"cosmetic-tape " + tapeColor1}/> : <button className={"link tape cosmetic-tape " + tapeColor1}><i class="fa-solid fa-reply"></i></button>}
+            {showmoreButton == 0 ? <div style={tapeBotPos} className={"cosmetic-tape " + tapeColor1}/> : <button className={"link tape cosmetic-tape " + tapeColor1}><i className="fa-solid fa-reply"></i></button>}
         </figure>
     );
 }
