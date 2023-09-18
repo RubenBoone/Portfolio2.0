@@ -42,21 +42,22 @@ function App() {
         <div className='row align-items-center m-3'>
           <div className='col-md-6 col-sm-12'>
           <Poloroid picture={"/img/ruben.jpg"} alt={"Picture of Ruben Boone"} 
-            description={"Ruben Boone - 2023"} TapeType={TapeType.LR} tapeColor1="blue-tape" tapeColor2="red-tape"/>
+            description={"Ruben Boone - 2023"} TapeType={TapeType.LR} tapeColor1="blue-tape" tapeColor2="red-tape" rotate={-3}/>
           </div>
           <div className='col-md-6 col-sm-12'>
             <SocialLinks/>
           </div>
         </div>
-        <div className='m-5 row justify-content-around'>
-          <div className='col-sm-12 col-md-4 my-3'>
+        <h2 className='handWritten mx-4'><mark>Things about me</mark></h2>
+        <div className='m-5 mt-0 row justify-content-around'>
+          <div className='col-sm-12 col-md-4 mt-3'>
             <PostIt title="Info" listItems={aboutMe}/>
           </div>
           <div className='col-sm-12 col-md-4 my-3'>
             <PostIt title="Opleidingen" listItems={degrees} color="#ffe869"/>
           </div>
         </div>
-        <h2 className='handWritten tape blue-tape p-2 m-5'>Projecten</h2>
+        <h2 className='handWritten my-5 mb-3 mx-4'><mark>Projecten</mark></h2>
         <ProjectList/>
     </div>
   );

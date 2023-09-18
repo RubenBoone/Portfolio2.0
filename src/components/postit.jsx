@@ -10,7 +10,9 @@ const PostIt = ({title, listItems, color="#ff6854"}) => {
         backgroundColor: color,
         minHeight: "15rem",
         fontWeight: "bold",
-        boxShadow: "3px 3px 15px rgba(0,0,0,0.6)"
+        boxShadow: "3px 3px 15px rgba(0,0,0,0.6)",
+        minWidth: "15rem",
+        minHeight: "15rem"
     }
 
     const headerStyle = {

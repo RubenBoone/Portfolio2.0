@@ -34,6 +34,7 @@ body {
   min-height: 3rem;
   min-width: 8rem;
   position: absolute;
+  left: 37%
 }
 
 .link {
@@ -61,6 +62,40 @@ body {
   background-color: rgba(233, 59, 216, 0.4) !important;
 }
 
+.yellow-tape {
+  background-color: rgba(240,240,107,0.6) !important;
+}
+
 img {
   border: 2px solid black;
+}
+
+mark {
+  display: inline-block;
+  line-height: 0em;
+  padding-bottom: 0.8rem;
+}
+
+button {
+  bottom: -15%;
+  left: 30% !important;
+  cursor: pointer;
+  position: absolute;
+  margin: 2rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  border: 0px;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  button{
+    left: 35% !important;
+  }
+
+  .cosmetic-tape  {
+    left: 40%;
+  }
+  
 }
